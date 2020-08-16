@@ -1,0 +1,54 @@
+{
+  "name": "moneyves",
+  "private": true,
+  "description": "Fintech web application",
+  "version": "1.1.0",
+  "author": "Jide Abdul-Qudus <jideabdqudus@gmail.com>",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "bootstrap": "^4.5.2",
+    "gatsby": "^2.24.47",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-google-analytics": "^2.3.13",
+    "gatsby-plugin-manifest": "^2.4.23",
+    "gatsby-plugin-offline": "^3.2.23",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.27",
+    "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-transformer-sharp": "^2.5.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-dom": "^16.13.1",
+    "react-feather": "^2.0.8",
+    "react-helmet": "^6.1.0",
+    "react-scrollspy": "^3.4.3",
+    "reactstrap": "^8.5.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jideabdqudus/moneyvest"
+  },
+  "bugs": {
+    "url": "https://github.com/jideabdqudus/moneyvest"
+  }
+}
