@@ -35,5 +35,5 @@ At the project root, serve the production build of your site:
 gatsby serve
 ```
 
-⚠️ Built for AdvansioInteractive Test
+⚠️ Built for AdvansioInteractive
 
