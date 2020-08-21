@@ -4,7 +4,14 @@ import { Container, Row, Col, FormGroup } from "reactstrap"
 import cx from "classnames"
 import { Link } from "gatsby"
 
-import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
+import {
+  Spinner,
+  Toast,
+  ToastBody,
+  ToastHeader,
+  Navbar,
+  NavbarBrand,
+} from "reactstrap"
 
 const Sign = () => {
   const [show, setShow] = useState(false)
@@ -12,6 +19,13 @@ const Sign = () => {
 
   return (
     <Fragment>
+      <Container>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand>
+            <Link to="/">Moneyvest</Link>
+          </NavbarBrand>
+        </Navbar>
+      </Container>
       <div style={{ backgroundColor: "#098c8c" }}>
         <div className={styles.pageContentBge5}>
           <Container>
