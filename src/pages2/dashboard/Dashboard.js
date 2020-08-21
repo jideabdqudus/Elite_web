@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Table, Button, Badge } from "reactstrap"
+import { Row, Col, Button, Badge } from "reactstrap"
 
 import Widget from "../../components/Widget"
 
@@ -14,7 +14,7 @@ import i3 from "../../images/idea3.png"
 import i4 from "../../images/idea4.jpeg"
 
 class Dashboard extends React.Component {
-  constructor() {
+  constructor() { 
     super()
     this.forceUpdate = this.forceUpdate.bind(this)
   }
