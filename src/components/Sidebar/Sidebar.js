@@ -88,7 +88,7 @@ class Sidebar extends React.Component {
           <ul className={s.nav}>
             <div className={"ml-4"}>
               <Link
-                to="/dashboard"
+                to="!#"
                 className={"mt-1 mb-1 ml-1"}
                 style={{ color: "#666" }}
               >
@@ -103,7 +103,7 @@ class Sidebar extends React.Component {
             </div>
             <div className={"ml-4"}>
               <Link
-                to="/transactions"
+                to="!#"
                 className={"mt-1 mb-1 ml-1"}
                 style={{ color: "#666" }}
               >
@@ -115,6 +115,72 @@ class Sidebar extends React.Component {
                 />
 
                 <span className={"ml-4 "}>Transactions</span>
+              </Link>
+            </div>
+            <div className={"ml-4"}>
+              <Link
+                to="!#"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                <img
+                  src={notify}
+                  alt="lightDashboard"
+                  width={"24px"}
+                  height={"24px"}
+                />
+
+                <span className={"ml-4 "}>Notifications</span>
+              </Link>
+            </div>
+            <div className={"ml-4"}>
+              <Link
+                to="!#"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                <img
+                  src={stocks}
+                  alt="lightDashboard"
+                  width={"24px"}
+                  height={"24px"}
+                />
+
+                <span className={"ml-4 "}>Stocks</span>
+              </Link>
+            </div>
+          </ul>
+          <ul className={s.downNav}>
+            <hr />
+            <div className={"ml-4"}>
+              <Link
+                to="!#"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                <img
+                  src={smileImg}
+                  alt="lightDashboard"
+                  width={"24px"}
+                  height={"24px"}
+                />
+
+                <span className={"ml-4 "}>Help & Support</span>
+              </Link>
+            </div>
+            <div className={"ml-4"}>
+              <Link
+                to="/sign"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                <img
+                  src={logoutIcon}
+                  alt="lightDashboard"
+                  width={"24px"}
+                  height={"24px"}
+                />
+                <span className={"ml-4 "}>Log out</span>
               </Link>
             </div>
           </ul>
