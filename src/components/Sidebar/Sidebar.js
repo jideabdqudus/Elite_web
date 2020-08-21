@@ -85,6 +85,39 @@ class Sidebar extends React.Component {
             Edit profile{" "}
           </Button>
           <br />
+          <ul className={s.nav}>
+            <div className={"ml-4"}>
+              <Link
+                to="/dashboard"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                <img
+                  src={lightDashboardIcon}
+                  alt="lightDashboard"
+                  width={"24px"}
+                  height={"24px"}
+                />
+                <span className={"ml-4 "}>Dashboard</span>
+              </Link>
+            </div>
+            <div className={"ml-4"}>
+              <Link
+                to="/transactions"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                <img
+                  src={totalSale}
+                  alt="lightDashboard"
+                  width={"24px"}
+                  height={"24px"}
+                />
+
+                <span className={"ml-4 "}>Transactions</span>
+              </Link>
+            </div>
+          </ul>
         </nav>
       </div>
     )
