@@ -32,7 +32,7 @@ const Header = props => {
     <HeaderWrapper id="top">
       <Container>
         <Flex>
-          <HeaderTextGroup>
+          <HeaderTextGroup> 
             <Subtitle>Smart Financing</Subtitle>
             <h1>
               The smart way

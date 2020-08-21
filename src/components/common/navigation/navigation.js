@@ -14,7 +14,7 @@ import {
   Mobile,
   ActionsContainer,
 } from "./style"
-
+import {Link} from 'gatsby'
 
 const NAV_ITEMS = ["Features", "", "", ""]
 
@@ -97,7 +97,7 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button> Sign in</button>
+            <button><Link  to="/sign">Sign in</Link></button>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
