@@ -28,7 +28,7 @@ const Tables = () => {
     number: "",
     date: "2020-08-23",
     status: "Sent",
-    color:"success"
+    color: "success",
   })
 
   const dispatch = useDispatch(addTransaction(transaction))
