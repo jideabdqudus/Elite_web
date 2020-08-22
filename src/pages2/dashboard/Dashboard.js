@@ -94,20 +94,20 @@ class Dashboard extends React.Component {
               }
               customDropDown
             >
-              <Row className={`justify-content-between mt-3`} noGutters>
+              <Row className={`justify-content-between`} noGutters>
                 <Col sm={8} className={"d-flex align-items-center"}>
                   <h3 className={"fw-semi-bold mb-0"}>₦10,200</h3>
                 </Col>
               </Row>
               <hr />
-              <Row style={{ marginBottom: -9, marginTop: -1 }}>
+              <Row style={{ marginBottom: -15, marginTop: -3 }}>
                 <Col sm={12}>
                   <ul>
                     <li>Advansio Cooperative</li>
                     <li>Cashcruz Salon</li>
                   </ul>
                   <br />
-                  <Row className={`justify-content-between mt-4`} noGutters>
+                  <Row className={`justify-content-between `} noGutters>
                     <Col sm={8} className={"d-flex align-items-center"}>
                       <Button color="info" outline size="sm">
                         View Sponsorships{" "}
@@ -162,7 +162,6 @@ class Dashboard extends React.Component {
                   >
                     Tenor
                   </p>
-                  <br />
                   <br />
                   <Row className={`justify-content-between mt-5`} noGutters>
                     <Col sm={8} className={"d-flex align-items-center"}></Col>
