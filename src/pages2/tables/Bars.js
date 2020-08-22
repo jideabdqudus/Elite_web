@@ -4,10 +4,10 @@ import color from 'rcolor';
 import createClass from 'create-react-class';
 
 const initialState = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['Advansio', 'KPMG', 'Dangote', 'Moneyvest', 'UBA', 'The Qoder', 'Allied Cop'],
   datasets: [
     {
-		label: 'My First dataset',
+		label: 'Investment Rates',
 		backgroundColor: 'rgba(255,99,132,0.2)',
 		borderColor: 'rgba(255,99,132,1)',
 		borderWidth: 1,
@@ -71,7 +71,6 @@ export default createClass({
   render() {
     return (
       <div>
-        <h2>You can even make crazy graphs like this!</h2>
  		<Graph />
       </div>
     );

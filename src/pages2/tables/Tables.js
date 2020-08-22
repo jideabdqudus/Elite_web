@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import {
   Row,
   Col,
@@ -16,6 +16,16 @@ import { Doughnut } from "react-chartjs-2"
 import Bars from "./Bars"
 
 const Tables = () => {
+
+  const [transaction, setTransaction] = useState({
+    name:"",
+    amount:"",
+    number:"",
+    city:"",
+    state:"",
+    code:""
+  })
+
   const data = {
     labels: ["Red", "Green", "Yellow"],
     datasets: [
