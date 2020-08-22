@@ -38,6 +38,7 @@
     "moment": "^2.27.0",
     "prop-types": "^15.7.2",
     "rc-hammerjs": "^0.6.10",
+    "rcolor": "^2.0.2",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-animate-height": "^2.0.23",

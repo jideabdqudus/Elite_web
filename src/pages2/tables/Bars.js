@@ -19,7 +19,7 @@ const initialState = {
 
 
 
-class Graph extends React.Component({
+const Graph = React.createClass({
 	displayName: 'Graph',
 	componentWillMount(){
 		this.setState(initialState);
