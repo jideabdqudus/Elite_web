@@ -62,7 +62,7 @@ const Sign = () => {
                           name="password"
                         />
                       </FormGroup>
-                      <Link to="/dashboard" style={{ display: "block" }}>
+                      <Link to="/app/dashboard" style={{ display: "block" }}>
                         <button
                           style={{ marginBottom: "20px" }}
                           className={cx(
