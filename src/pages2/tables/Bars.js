@@ -1,6 +1,7 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
 import color from 'rcolor';
+import createClass from 'create-react-class';
 
 const initialState = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -19,7 +20,7 @@ const initialState = {
 
 
 
-const Graph = React.createClass({
+const Graph = createClass({
 	displayName: 'Graph',
 	componentWillMount(){
 		this.setState(initialState);
@@ -64,7 +65,7 @@ const Graph = React.createClass({
 
 
 
-export default React.createClass({
+export default createClass({
   displayName: 'Crazy Random Graph',
 
   render() {

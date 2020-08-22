@@ -17,6 +17,7 @@
     "bootstrap": "^4.5.2",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
+    "create-react-class": "^15.6.3",
     "echarts": "^4.8.0",
     "echarts-for-react": "^2.0.16",
     "font-awesome": "^4.7.0",
