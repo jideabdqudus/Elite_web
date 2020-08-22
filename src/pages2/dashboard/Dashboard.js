@@ -14,7 +14,7 @@ import i3 from "../../images/idea3.png"
 import i4 from "../../images/idea4.jpeg"
 
 class Dashboard extends React.Component {
-  constructor() { 
+  constructor() {
     super()
     this.forceUpdate = this.forceUpdate.bind(this)
   }
@@ -183,11 +183,12 @@ class Dashboard extends React.Component {
           <Col sm="12">
             <h3
               className={"mb-2"}
-              style={{ color: "#666", fontSize: 20, fontWeight: "normal" }}
+              style={{ color: "#666", fontSize: 20, fontWeight: "bold" }}
             >
               Investment Opportunities
             </h3>
           </Col>
+          <br />
           <br />
           <Col sm="12">
             <Widget
@@ -204,7 +205,7 @@ class Dashboard extends React.Component {
                   <Row>
                     <Col sm="6">
                       <Row>
-                        <Col sm="3">
+                        <Col sm="4">
                           <img
                             src={i1}
                             alt="Food"
@@ -232,7 +233,7 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col sm="6">
                       <Row>
-                        <Col sm="3">
+                        <Col sm="4">
                           <img
                             src={i2}
                             alt="bakery"
@@ -266,7 +267,7 @@ class Dashboard extends React.Component {
                   <Row>
                     <Col sm="6">
                       <Row>
-                        <Col sm="3">
+                        <Col sm="4">
                           <img
                             src={i3}
                             alt="sanitary"
@@ -293,7 +294,7 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col sm="6">
                       <Row>
-                        <Col sm="3">
+                        <Col sm="4">
                           <img
                             src={i4}
                             alt="ginger"
