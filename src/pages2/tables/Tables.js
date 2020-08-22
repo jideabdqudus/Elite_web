@@ -43,7 +43,7 @@ const Tables = () => {
   }
 
   const data = {
-    labels: ["Red", "Green", "Yellow"],
+    labels: ["Investments", "Withdrawn", "Expected"],
     datasets: [
       {
         data: [300, 50, 100],
@@ -99,7 +99,7 @@ const Tables = () => {
                 />
               </FormGroup>
               <Button type="submit" color="info">
-                Submit
+                Send
               </Button>
             </Form>
           </Widget>
