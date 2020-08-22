@@ -18,8 +18,6 @@ import {
   ModalFooter,
 } from "reactstrap"
 
-import dropdownImg from "../../images/widget-menu.svg"
-
 class Widget extends React.Component {
   static propTypes = {
     title: PropTypes.node,
