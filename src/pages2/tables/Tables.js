@@ -9,155 +9,12 @@ import {
   FormGroup,
   Label,
 } from "reactstrap"
-import { Sparklines, SparklinesBars } from "react-sparklines"
 
 import Widget from "../../components/Widget"
 import s from "./Tables.modules.scss"
 
-import ApexChart from "react-apexcharts"
-
-import { chartData } from "../charts/mock"
-
-import ReactEchartsCore from "echarts-for-react/lib/core"
-
-import echarts from "echarts/lib/echarts"
-
-import "echarts/lib/chart/line"
-import "echarts/lib/chart/pie"
-import "echarts/lib/chart/themeRiver"
-import "echarts/lib/component/tooltip"
-import "echarts/lib/component/legend"
-
 class Tables extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      cd: chartData,
-      initEchartsOptions: {
-        renderer: "canvas",
-      },
-
-      tableStyles: [
-        {
-          id: 1,
-          picture: require("../../images/tables/1.png"), // eslint-disable-line global-require
-          description: "Palo Alto",
-          info: {
-            type: "JPEG",
-            dimensions: "200x150",
-          },
-          date: new Date("September 14, 2012"),
-          size: "45.6 KB",
-          progress: {
-            percent: 29,
-            colorClass: "success",
-          },
-        },
-        {
-          id: 2,
-          picture: require("../../images/tables/2.png"), // eslint-disable-line global-require
-          description: "The Sky",
-          info: {
-            type: "PSD",
-            dimensions: "2400x1455",
-          },
-          date: new Date("November 14, 2012"),
-          size: "15.3 MB",
-          progress: {
-            percent: 33,
-            colorClass: "warning",
-          },
-        },
-        {
-          id: 3,
-          picture: require("../../images/tables/3.png"), // eslint-disable-line global-require
-          description: "Down the road",
-          label: {
-            colorClass: "info",
-            text: "INFO!",
-          },
-          info: {
-            type: "JPEG",
-            dimensions: "200x150",
-          },
-          date: new Date("September 14, 2012"),
-          size: "49.0 KB",
-          progress: {
-            percent: 38,
-            colorClass: "primary",
-          },
-        },
-        {
-          id: 4,
-          picture: require("../../images/tables/4.png"), // eslint-disable-line global-require
-          description: "The Edge",
-          info: {
-            type: "PNG",
-            dimensions: "210x160",
-          },
-          date: new Date("September 15, 2012"),
-          size: "69.1 KB",
-          progress: {
-            percent: 17,
-            colorClass: "danger",
-          },
-        },
-        {
-          id: 5,
-          picture: require("../../images/tables/5.png"), // eslint-disable-line global-require
-          description: "Fortress",
-          info: {
-            type: "JPEG",
-            dimensions: "1452x1320",
-          },
-          date: new Date("October 1, 2012"),
-          size: "2.3 MB",
-          progress: {
-            percent: 41,
-            colorClass: "info",
-          },
-        },
-      ],
-      checkboxes1: [false, true, false, false],
-      checkboxes2: [false, false, false, false, false, false],
-      checkboxes3: [false, false, false, false, false, false],
-    }
-
-    this.checkAll = this.checkAll.bind(this)
-  }
-
-  parseDate(date) {
-    this.dateSet = date.toDateString().split(" ")
-
-    return `${date.toLocaleString("en-us", { month: "long" })} ${
-      this.dateSet[2]
-    }, ${this.dateSet[3]}`
-  }
-
-  checkAll(ev, checkbox) {
-    const checkboxArr = new Array(this.state[checkbox].length).fill(
-      ev.target.checked
-    )
-    this.setState({
-      [checkbox]: checkboxArr,
-    })
-  }
-
-  changeCheck(ev, checkbox, id) {
-    //eslint-disable-next-line
-    this.state[checkbox][id] = ev.target.checked
-    if (!ev.target.checked) {
-      //eslint-disable-next-line
-      this.state[checkbox][0] = false
-    }
-    this.setState({
-      [checkbox]: this.state[checkbox],
-    })
-  }
-
   render() {
-    const { cd, initEchartsOptions } = this.state
     return (
       <div className={s.root}>
         <Row>
@@ -208,20 +65,6 @@ class Tables extends React.Component {
                 <Button color="info">Sign in</Button>
               </Form>
             </Widget>
-            <Col lg={12} xs={12}>
-              <Widget
-                title={<p style={{ fontWeight: 700 }}>Top Investors</p>}
-                customDropDown
-              >
-                <ApexChart
-                  className="sparkline-chart"
-                  height={350}
-                  series={cd.apex.column.series}
-                  options={cd.apex.column.options}
-                  type={"bar"}
-                />
-              </Widget>
-            </Col>
           </Col>
           <Col lg={6}>
             <Widget
@@ -285,19 +128,6 @@ class Tables extends React.Component {
                 </Table>
               </Row>
             </Widget>
-            <Col lg={12} xs={12}>
-              <Widget
-                title={<p style={{ fontWeight: 400 }}>Expense Chart</p>}
-                customDropDown
-              >
-                <ReactEchartsCore
-                  echarts={echarts}
-                  option={cd.echarts.donut}
-                  opts={initEchartsOptions}
-                  style={{ height: "190px" }}
-                />
-              </Widget>
-            </Col>
           </Col>
         </Row>
       </div>
