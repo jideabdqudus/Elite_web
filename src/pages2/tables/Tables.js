@@ -12,9 +12,31 @@ import {
 
 import Widget from "../../components/Widget"
 import s from "./Tables.modules.scss"
+import {Doughnut} from 'react-chartjs-2'
 
-class Tables extends React.Component {
-  render() {
+const Tables =()=> {
+
+  const data = {
+    labels: [
+      'Red',
+      'Green',
+      'Yellow'
+    ],
+    datasets: [{
+      data: [300, 50, 100],
+      backgroundColor: [
+      '#FF6384',
+      '#36A2EB',
+      '#FFCE56'
+      ],
+      hoverBackgroundColor: [
+      '#FF6384',
+      '#36A2EB',
+      '#FFCE56'
+      ]
+    }]
+  };
+  
     return (
       <div className={s.root}>
         <Row>
@@ -129,10 +151,11 @@ class Tables extends React.Component {
               </Row>
             </Widget>
           </Col>
+          
+        <Doughnut data={data}/>
         </Row>
       </div>
     )
   }
-}
 
 export default Tables
