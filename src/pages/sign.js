@@ -22,7 +22,16 @@ const Sign = () => {
       <Container>
         <Navbar color="light" light expand="md">
           <NavbarBrand>
-            <Link to="/">Moneyvest</Link>
+            <Link
+              to="/"
+              style={{
+                color: "black",
+                textDecoration: "none",
+                fontWeight: "bolder",
+              }}
+            >
+              Moneyvest
+            </Link>
           </NavbarBrand>
         </Navbar>
       </Container>
@@ -36,8 +45,10 @@ const Sign = () => {
                   style={{ borderRadius: "10px" }}
                 >
                   <Row>
-                    <Col sm="12" md={{ size: 6, offset: 3 }}>
-                      <h4>Sign in into Moneyvest</h4>
+                    <Col sm="12" md={{ size: 7, offset: 3 }}>
+                      <h4 style={{ fontWeight: "bolder" }}>
+                        Sign in into Moneyvest
+                      </h4>
                     </Col>
                   </Row>
                   <br />
@@ -62,7 +73,10 @@ const Sign = () => {
                           name="password"
                         />
                       </FormGroup>
-                      <Link to="/app/dashboard" style={{ display: "block" }}>
+                      <Link
+                        to="/app/dashboard"
+                        style={{ display: "block", textDecoration: "none" }}
+                      >
                         <button
                           style={{ marginBottom: "20px" }}
                           className={cx(

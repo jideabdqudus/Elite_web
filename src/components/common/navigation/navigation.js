@@ -16,7 +16,6 @@ import {
 } from "./style"
 import { Link } from "gatsby"
 
-
 const NAV_ITEMS = ["Features", "", "", ""]
 
 export default class Navigation extends Component {
@@ -98,7 +97,15 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button> <Link to="/sign">Sign in</Link></button>
+            <button>
+              {" "}
+              <Link
+                to="/sign"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Sign in
+              </Link>
+            </button>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>

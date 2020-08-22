@@ -5,13 +5,14 @@ import {
   NavbarBrand,
   Container,
 } from "reactstrap"
+import { Link } from "gatsby"
 
 export default class LoginNavigation extends Component {
   render() {
     return (
       <Container>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Moneyvest</NavbarBrand>
+          <Link to="/" style={{color:"black", textDecoration:"none"}}>Moneyvest</Link>
         </Navbar>
       </Container>
     )

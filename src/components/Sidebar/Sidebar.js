@@ -62,7 +62,7 @@ class Sidebar extends React.Component {
         <nav className={s.root}>
           <header className={s.logo}>
             <span>
-              <Link to="/" style={{ color: "white" }}>
+              <Link to="/" style={{ color: "white", textDecoration:"none" }}>
                 Moneyvest&nbsp;
               </Link>
             </span>
@@ -84,13 +84,13 @@ class Sidebar extends React.Component {
           >
             Edit profile{" "}
           </Button>
-          <br />
+          <br /><br/>
           <ul className={s.nav}>
             <div className={"ml-4"}>
               <Link
-                to="!#"
+                to="/app/dashboard"
                 className={"mt-1 mb-1 ml-1"}
-                style={{ color: "#666" }}
+                style={{ color: "#666", textDecoration:"none" }}
               >
                 <img
                   src={lightDashboardIcon}
@@ -98,14 +98,15 @@ class Sidebar extends React.Component {
                   width={"24px"}
                   height={"24px"}
                 />
-                <span className={"ml-4 "}>Dashboard</span>
+                <span className={"ml-4 "}><b>Dashboard</b></span>
               </Link>
             </div>
+            <br/>
             <div className={"ml-4"}>
               <Link
                 to="/app/transactions"
                 className={"mt-1 mb-1 ml-1"}
-                style={{ color: "#666" }}
+                style={{ color: "#666", textDecoration:"none" }}
               >
                 <img
                   src={totalSale}
@@ -114,15 +115,12 @@ class Sidebar extends React.Component {
                   height={"24px"}
                 />
 
-                <span className={"ml-4 "}>Transactions</span>
+                <span className={"ml-4 "}><b>Transactions</b></span>
               </Link>
             </div>
+            <br/>
             <div className={"ml-4"}>
-              <Link
-                to="!#"
-                className={"mt-1 mb-1 ml-1"}
-                style={{ color: "#666" }}
-              >
+              
                 <img
                   src={notify}
                   alt="lightDashboard"
@@ -130,15 +128,11 @@ class Sidebar extends React.Component {
                   height={"24px"}
                 />
 
-                <span className={"ml-4 "}>Notifications</span>
-              </Link>
+                <span className={"ml-4 "}><b>Notifications</b></span>
+              
             </div>
+            <br/>
             <div className={"ml-4"}>
-              <Link
-                to="!#"
-                className={"mt-1 mb-1 ml-1"}
-                style={{ color: "#666" }}
-              >
                 <img
                   src={stocks}
                   alt="lightDashboard"
@@ -146,9 +140,10 @@ class Sidebar extends React.Component {
                   height={"24px"}
                 />
 
-                <span className={"ml-4 "}>Stocks</span>
-              </Link>
+                <span className={"ml-4 text-muted"} style={{fontWeight:"bold"}}>Stocks</span>
+                
             </div>
+
           </ul>
           <ul className={s.downNav}>
             <hr />
