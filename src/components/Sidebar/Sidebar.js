@@ -119,7 +119,7 @@ class Sidebar extends React.Component {
             </div>
             <div className={"ml-4"}>
               <Link
-                to="!#"
+                to="/app/transactions"
                 className={"mt-1 mb-1 ml-1"}
                 style={{ color: "#666" }}
               >
