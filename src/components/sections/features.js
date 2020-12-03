@@ -6,7 +6,7 @@ import totalSale from "../../images/total-sale.svg"
 import darkDashboardIcon from "../../images/dark-dashboard.svg"
 import smileImg from "../../images/smileImg.svg"
 
-import { Section, Container } from "../global" 
+import { Section, Container } from "../global"
 
 const Features = () => (
   <Section id="features">

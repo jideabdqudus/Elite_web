@@ -17,7 +17,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Poppins`,
+            family: `Source Sans Pro`,
             variants: [`300`, `400`, `600`, `700`],
           },
         ],

@@ -12,14 +12,21 @@ import Footer from "../components/sections/footer"
 import GetStarted from "../components/sections/getstarted"
 import Youtube from "../components/sections/youtube"
 import Steps from "../components/sections/steps"
+import "../components/sections/sections.css"
+import Areas from "../components/sections/areas"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Navigation />
     <Header />
-    {/* <Youtube/> */}
-    <Steps/>
+    <Youtube />
+    <div className="stepBackground">
+      <Areas/>
+    </div>
+    <div className="stepBackground">
+      <Steps />
+    </div>
     <Features />
     <GetStarted />
     <Footer />
