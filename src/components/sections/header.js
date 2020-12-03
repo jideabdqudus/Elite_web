@@ -1,16 +1,18 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-
+import "./sections.css"
+import {Row, Col} from "reactstrap"
 import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
+import Laptop from "../../images/product/laptop-v2.png"
 
 import { Container } from "../global"
 
 const Header = props => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "crowdy" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "laptop-v2" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -32,40 +34,32 @@ const Header = props => {
     <HeaderWrapper id="top">
       <Container>
         <Flex>
-          <HeaderTextGroup> 
-            <Subtitle>Smart Financing</Subtitle>
+          <HeaderTextGroup>
+            <Subtitle></Subtitle>
             <h1>
-              The smart way
-              <br />
-              to get your
-              <br />
-              <span style={{ color: "#098C8C" }}>money working</span>
+              Invest securely anytime, anywhere with{" "}
+              <span style={{ color: "#17a9b5" }}>zero risk</span>
             </h1>
             <h2>
-              Moneyvest connects you to mouth-watering opportunities with good
-              returns.
+              Elite Investments connects you to mouth-watering opportunities
+              with good returns.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
               <HeaderButton onClick={toggle}>Early access</HeaderButton>
             </HeaderForm>
-            <Toast isOpen={show}>
-              <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
-                Info
-              </ToastHeader>
-              <ToastBody>
-                Oops, that hurts! That part of me is not working right now.
-              </ToastBody>
-            </Toast>
             <FormSubtitle>
               No spamming{" "}
               <span style={{ color: "#098C8C" }}>It's a promise</span>
             </FormSubtitle>
           </HeaderTextGroup>
-          <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
+          {/* <ImageWrapper >
+            <StyledImage className="imageWrap" fluid={data.file.childImageSharp.fluid}  />
             <br />
-          </ImageWrapper>
+          </ImageWrapper> */}
+          <div>
+            <img src={Laptop} className="imageWrap container" />
+          </div>
         </Flex>
       </Container>
     </HeaderWrapper>
@@ -140,7 +134,6 @@ const HeaderForm = styled.form`
 const FormSubtitle = styled.span`
   ${props => props.theme.font_size.xxsmall}
 `
-
 
 const HeaderInput = styled.input`
   font-weight: 500;

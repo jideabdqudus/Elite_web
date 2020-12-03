@@ -1,0 +1,40 @@
+.btnLogin {
+  margin-right: 10px !important;
+  background: none !important;
+  text-transform: none !important;
+  border-color: #17a9b5 !important;
+  border-radius: 8px !important;
+  border-style: solid !important;
+}
+
+.btnLogin:hover {
+  background-color: #17a9b5 !important;
+  color: #fff !important;
+}
+
+.login {
+  color: black !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  padding: 15px !important;
+}
+
+.btnSign {
+  background-color: #17a9b5 !important;
+  text-transform: none !important;
+  border-color: #17a9b5 !important;
+  border-radius: 8px !important;
+  border-style: solid !important;
+}
+.btnSign:hover {
+  background-color: none !important;
+}
+
+.sign {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  padding: 15px !important;
+}

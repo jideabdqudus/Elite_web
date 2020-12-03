@@ -15,8 +15,10 @@ import {
   ActionsContainer,
 } from "./style"
 import { Link } from "gatsby"
+import Elite from "../../../images/Elite(black).png"
+import "./navigation.css"
 
-const NAV_ITEMS = ["Features", "", "", ""]
+const NAV_ITEMS = ["Home", "Blog", "FAQ", ""]
 
 export default class Navigation extends Component {
   state = {
@@ -63,7 +65,9 @@ export default class Navigation extends Component {
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem key={navItem} style={{ fontWeight: "700" }}>
+            {this.getNavAnchorLink(navItem)}
+          </NavItem>
         ))}
       </Scrollspy>
     </NavListWrapper>
@@ -78,7 +82,7 @@ export default class Navigation extends Component {
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Moneyvest
+                <img src={Elite} alt="Logo" height="60px" />
               </AnchorLink>
             </Scrollspy>
           </Brand>
@@ -90,20 +94,25 @@ export default class Navigation extends Component {
               {this.state.mobileMenuOpen ? (
                 <X size={24} alt="close menu" />
               ) : (
-                <Menu size={24} alt="open menu" />
+                <div>
+                  <Menu size={24} alt="open menu" />
+                </div>
               )}
             </button>
           </Mobile>
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button>
+            <button className="btnLogin">
               {" "}
-              <Link
-                to="/sign"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Sign in
+              <Link to="/sign" className="login">
+                Log in
+              </Link>
+            </button>
+            <button className="btnSign">
+              {" "}
+              <Link to="/sign" className="sign">
+                Sign up
               </Link>
             </button>
           </ActionsContainer>
@@ -111,7 +120,23 @@ export default class Navigation extends Component {
         <Mobile>
           {mobileMenuOpen && (
             <MobileMenu>
-              <Container>{this.getNavList({ mobile: true })}</Container>
+              <Container
+                style={{ backgroundColor: "white", paddingBottom: "50px" }}
+              >
+                {this.getNavList({ mobile: true })}
+                <button className="btnLogin">
+                  {" "}
+                  <Link to="/sign" className="login">
+                    Log in
+                  </Link>
+                </button>
+                <button className="btnSign">
+                  {" "}
+                  <Link to="/sign" className="sign">
+                    Sign up
+                  </Link>
+                </button>
+              </Container>
             </MobileMenu>
           )}
         </Mobile>
