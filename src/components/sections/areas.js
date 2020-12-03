@@ -7,8 +7,13 @@ import darkDashboardIcon from "../../images/dark-dashboard.svg"
 import smileImg from "../../images/smileImg.svg"
 import { Row, Col } from "reactstrap"
 import { Section, Container } from "../global"
-import { faCoffee } from "font-awesome"
-
+import Construction from "../../images/001-hook.svg"
+import eCommerce from "../../images/003-shopping-cart.svg"
+import autoMobile from "../../images/005-service.svg"
+import Airline from "../../images/008-plane.svg"
+import Payment from "../../images/012-risk.svg"
+import SP500 from "../../images/009-stats.svg"
+import Services from "../../images/011-management-service.svg"
 const Areas = () => (
   <Section
     id="features"
@@ -51,39 +56,96 @@ const Areas = () => (
           <FeaturesGrid>
             <FeatureItem>
               <img
-                src={darkExtra}
-                alt="darkExtra"
+                src={Construction}
+                alt="Construction"
                 width={"60px"}
                 height={"60px"}
               />
-              <FeatureTitle>Easy to use</FeatureTitle>
+              <h3
+                style={{
+                  color: "#212529",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  marginBottom: ".5rem",
+                }}
+              >
+                Construction
+              </h3>
             </FeatureItem>
             <FeatureItem>
               <img
-                src={totalSale}
-                alt="pieChart"
+                src={eCommerce}
+                alt="eCommerce"
                 width={"60px"}
                 height={"60px"}
               />
-              <FeatureTitle>Quick returns</FeatureTitle>
+              <h3
+                style={{
+                  color: "#212529",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  marginBottom: ".5rem",
+                }}
+              >
+                eCommerce/Clouds
+              </h3>
             </FeatureItem>
             <FeatureItem>
               <img
-                src={darkDashboardIcon}
-                alt="darkDashboard"
+                src={autoMobile}
+                alt="autoMobile"
                 width={"60px"}
                 height={"60px"}
               />
-              <FeatureTitle>Single dashboard</FeatureTitle>
+              <h3
+                style={{
+                  color: "#212529",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  marginBottom: ".5rem",
+                }}
+              >
+                Automobile
+              </h3>
             </FeatureItem>
             <FeatureItem>
-              <img
-                src={smileImg}
-                alt="smileImg"
-                width={"60px"}
-                height={"60px"}
-              />
-              <FeatureTitle>Customer service</FeatureTitle>
+              <img src={Airline} alt="Airline" width={"60px"} height={"60px"} />
+              <h3
+                style={{
+                  color: "#212529",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  marginBottom: ".5rem",
+                }}
+              >
+                Airline
+              </h3>
+            </FeatureItem>
+            <FeatureItem>
+              <img src={Payment} alt="Payment" width={"60px"} height={"60px"} />
+              <h3
+                style={{
+                  color: "#212529",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  marginBottom: ".5rem",
+                }}
+              >
+                Payment system/finance
+              </h3>
+            </FeatureItem>
+            <FeatureItem>
+              <img src={SP500} alt="SP500" width={"60px"} height={"60px"} />
+              <h3
+                style={{
+                  color: "#212529",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  marginBottom: ".5rem",
+                }}
+              >
+                S&P 500
+              </h3>
             </FeatureItem>
           </FeaturesGrid>
         </Col>
