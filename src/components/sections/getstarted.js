@@ -18,74 +18,78 @@ import {
   Button,
   Col,
 } from "reactstrap"
-import axios from "axios"
+import Man from "../../images/product/image_man_2.jpg"
 
-const news = {
-  method: "get",
-  url:
-    "http://newsapi.org/v2/top-headlines?country=ng&category=business&apiKey=20522df2815a4ce39815abc038d54ea7",
-}
-const API = axios
-  .request(news)
-  .then(function(response) {
-    return(
-      console.log("working")
-    )
-  })
-  .catch(function(error) {
-    console.error("geffdifok")
-  })
-
-  console.log(API)
-
-const GetStarted = () => {
-  // const [show, setShow] = useState(false)
-  // const toggle = () => setShow(!show)
-
+const GetStarted = ({ api }) => {
+  
   return (
-    // <StyledSection>
-    //   <GetStartedContainer>
-    //     <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
-    //     <TryItButton onClick={toggle}>Get early access</TryItButton>
-    //     <br />
-    //     <Toast isOpen={show}>
-    //       <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
-    //         Info
-    //       </ToastHeader>
-    //       <ToastBody>
-    //         Oops, that hurts! That part of me is not working right now.
-    //       </ToastBody>
-    //     </Toast>
-    //     <Subtitle>Perfectly made for you.</Subtitle>
-    //   </GetStartedContainer>
-    // </StyledSection>
+    
     <Container>
+      <SectionTitle>Latest News</SectionTitle>
+      <p
+        style={{
+          color: "#606771",
+          fontSize: "18px",
+          textAlign: "center",
+          fontWeight: "Normal",
+          paddingLeft: "30px",
+          paddingRight: "30px",
+          marginBottom: "50px",
+        }}
+      >
+        {" "}
+        The latest Business news across the globe.{" "}
+      </p>
       <div>
-        <Card>
-          <CardImg
-            top
-            width="100%"
-            src="/assets/318x180.svg"
-            alt="Card image cap"
-          />
-          <CardBody>
-            <CardTitle tag="h5">Card title</CardTitle>
-            <CardSubtitle tag="h6" className="mb-2 text-muted">
-              Card subtitle
-            </CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
         <div>
-        {/* {API.map((apis)=>(
-          <h1>
-            {apis.status}
-          </h1>
-        ))} */}
+          <div>
+            {api.length === 0 ? (
+              <div>Loading</div>
+            ) : (
+              api.map(news => {
+                return (
+                  <div>
+                    <Col xl={3} style={{display:"flex"}}>
+                      <Card>
+                        <a href={news.url} target="__blank">
+                          <CardImg
+                            top
+                            width="100%"
+                            src={
+                              news.urlToImage ? `${news.urlToImage}` : `${Man}`
+                            }
+                            alt="Card image cap"
+                          />
+                          <CardBody>
+                            <CardTitle tag="h5" className="newsTitle">
+                              {`${news.title}`.substring(0, 100)}..
+                            </CardTitle>
+                            <CardSubtitle
+                              tag="h6"
+                              className="mb-2 text-muted"
+                            ></CardSubtitle>
+                            {/* <CardText className="newsTitle">
+                            {news.description
+                              ? `${news.description}`.substring(0, 100)
+                              : `${news.content}`.substring(0, 100)}
+                            ...
+                          </CardText> */}
+                            {/* <Button>
+                            <a href={news.url} target="__blank">
+                              Read more
+                            </a>
+                          </Button> */}
+                            <br />
+                            <span className="source">{news.source.name}</span>
+                          </CardBody>
+                        </a>
+                      </Card>
+                    </Col>
+                  </div>
+                )
+              })
+            )}
+          </div>
         </div>
       </div>
     </Container>
@@ -146,4 +150,11 @@ const Subtitle = styled.span`
   padding-top: 16px;
   font-size: 14px;
   color: ${props => props.theme.color.primary};
+`
+const SectionTitle = styled.h3`
+  color: ${props => props.theme.color.primary};
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 10px;
+  text-align: center;
 `
