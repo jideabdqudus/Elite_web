@@ -7,7 +7,7 @@ import darkDashboardIcon from "../../images/dark-dashboard.svg"
 import smileImg from "../../images/smileImg.svg"
 
 import { Section, Container } from "../global"
-import{Row, Col} from "reactstrap"
+import { Row, Col } from "reactstrap"
 
 const Features = () => (
   <Section id="features">
@@ -15,95 +15,90 @@ const Features = () => (
       <Subtitle></Subtitle>
       <SectionTitle>Why us?</SectionTitle>
       <Row>
-          <Col xl={2}>
-            <img
-              src={Construction}
-              alt="Construction"
-              width={"60px"}
-              style={{ display: "block", margin: "auto" }}
-              height={"60px"}
-            />
-            <h3
-              style={{
-                color: "#212529",
-                fontSize: "18px",
-                fontWeight: "700",
-                textAlign: "center",
-                marginBottom: ".5rem",
-                textAlign: "center",
-              }}
-            >
-              Construction
-            </h3>
-          </Col>
-          </Row>
-      <FeaturesGrid>
-        <FeatureItem>
-          <img src={darkExtra} alt="darkExtra" width={"60px"} height={"60px"} />
-          <FeatureTitle>
-            <h3
-              style={{
-                color: "#212529",
-                fontSize: "18px",
-                fontWeight: "700",
-                marginBottom: ".5rem",
-              }}
-            >
-              Easy to Use
-            </h3>
-          </FeatureTitle>
-        </FeatureItem>
-        <FeatureItem>
-          <img src={totalSale} alt="pieChart" width={"60px"} height={"60px"} />
-          <FeatureTitle>
-            <h3
-              style={{
-                color: "#212529",
-                fontSize: "18px",
-                fontWeight: "700",
-                marginBottom: ".5rem",
-              }}
-            >
-              Quick Returns
-            </h3>
-          </FeatureTitle>
-        </FeatureItem>
-        <FeatureItem>
+        <Col xl={3}>
+          <img
+            src={darkExtra}
+            alt="darkExtra"
+            width={"60px"}
+            style={{ display: "block", margin: "auto" }}
+            height={"60px"}
+          />
+          <h3
+            style={{
+              color: "#212529",
+              fontSize: "18px",
+              fontWeight: "700",
+              marginBottom: ".5rem",
+              textAlign: "center",
+            }}
+          >
+            Easy to Use
+          </h3>
+        </Col>
+
+        <Col xl={3}>
+          <img
+            src={totalSale}
+            alt="pieChart"
+            width={"60px"}
+            style={{ display: "block", margin: "auto" }}
+            height={"60px"}
+          />
+
+          <h3
+            style={{
+              color: "#212529",
+              fontSize: "18px",
+              fontWeight: "700",
+              marginBottom: ".5rem",
+              textAlign: "center",
+            }}
+          >
+            Quick Returns
+          </h3>
+        </Col>
+        <Col xl={3}>
           <img
             src={darkDashboardIcon}
             alt="darkDashboard"
             width={"60px"}
+            style={{ display: "block", margin: "auto" }}
             height={"60px"}
           />
-          <FeatureTitle>
-            <h3
-              style={{
-                color: "#212529",
-                fontSize: "18px",
-                fontWeight: "700",
-                marginBottom: ".5rem",
-              }}
-            >
-              Single Dashboard
-            </h3>
-          </FeatureTitle>
-        </FeatureItem>
-        <FeatureItem>
-          <img src={smileImg} alt="smileImg" width={"60px"} height={"60px"} />
-          <FeatureTitle>
-            <h3
-              style={{
-                color: "#212529",
-                fontSize: "18px",
-                fontWeight: "700",
-                marginBottom: ".5rem",
-              }}
-            >
-              Customer Service
-            </h3>
-          </FeatureTitle>
-        </FeatureItem>
-      </FeaturesGrid>
+          <h3
+            style={{
+              color: "#212529",
+              fontSize: "18px",
+              fontWeight: "700",
+              marginBottom: ".5rem",
+              textAlign: "center",
+            }}
+          >
+            Single Dashboard
+          </h3>
+        </Col>
+        <Col xl={3}>
+          <img
+            src={smileImg}
+            alt="smileImg"
+            width={"60px"}
+            style={{ display: "block", margin: "auto" }}
+            height={"60px"}
+          />
+
+          <h3
+            style={{
+              color: "#212529",
+              fontSize: "18px",
+              fontWeight: "700",
+              marginBottom: ".5rem",
+              textAlign: "center",
+            }}
+          >
+            Customer Service
+          </h3>
+        </Col>
+      </Row>
     </StyledContainer>
     <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
     <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />

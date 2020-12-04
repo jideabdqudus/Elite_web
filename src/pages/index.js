@@ -14,6 +14,8 @@ import Youtube from "../components/sections/youtube"
 import Steps from "../components/sections/steps"
 import "../components/sections/sections.css"
 import Areas from "../components/sections/areas"
+import axios from "axios"
+
 
 
 const IndexPage = () => (

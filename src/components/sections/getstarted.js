@@ -3,29 +3,92 @@ import styled from "styled-components"
 
 import { Container, Section } from "../global"
 
-import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
+import {
+  Spinner,
+  Toast,
+  ToastBody,
+  ToastHeader,
+  Row,
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Col,
+} from "reactstrap"
+import axios from "axios"
+
+const news = {
+  method: "get",
+  url:
+    "http://newsapi.org/v2/top-headlines?country=ng&category=business&apiKey=20522df2815a4ce39815abc038d54ea7",
+}
+const API = axios
+  .request(news)
+  .then(function(response) {
+    return(
+      console.log("working")
+    )
+  })
+  .catch(function(error) {
+    console.error("geffdifok")
+  })
+
+  console.log(API)
 
 const GetStarted = () => {
-  const [show, setShow] = useState(false)
-  const toggle = () => setShow(!show)
+  // const [show, setShow] = useState(false)
+  // const toggle = () => setShow(!show)
 
   return (
-    <StyledSection>
-      <GetStartedContainer>
-        <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
-        <TryItButton onClick={toggle}>Get early access</TryItButton>
-        <br />
-        <Toast isOpen={show}>
-          <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
-            Info
-          </ToastHeader>
-          <ToastBody>
-            Oops, that hurts! That part of me is not working right now.
-          </ToastBody>
-        </Toast>
-        <Subtitle>Perfectly made for you.</Subtitle>
-      </GetStartedContainer>
-    </StyledSection>
+    // <StyledSection>
+    //   <GetStartedContainer>
+    //     <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
+    //     <TryItButton onClick={toggle}>Get early access</TryItButton>
+    //     <br />
+    //     <Toast isOpen={show}>
+    //       <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
+    //         Info
+    //       </ToastHeader>
+    //       <ToastBody>
+    //         Oops, that hurts! That part of me is not working right now.
+    //       </ToastBody>
+    //     </Toast>
+    //     <Subtitle>Perfectly made for you.</Subtitle>
+    //   </GetStartedContainer>
+    // </StyledSection>
+    <Container>
+      <div>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="/assets/318x180.svg"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle tag="h5">Card title</CardTitle>
+            <CardSubtitle tag="h6" className="mb-2 text-muted">
+              Card subtitle
+            </CardSubtitle>
+            <CardText>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <div>
+        {/* {API.map((apis)=>(
+          <h1>
+            {apis.status}
+          </h1>
+        ))} */}
+        </div>
+      </div>
+    </Container>
   )
 }
 
