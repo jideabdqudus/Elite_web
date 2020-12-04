@@ -21,9 +21,7 @@ import {
 import Man from "../../images/product/image_man_2.jpg"
 
 const GetStarted = ({ api }) => {
-  
   return (
-    
     <Container>
       <SectionTitle>Latest News</SectionTitle>
       <p
@@ -48,50 +46,18 @@ const GetStarted = ({ api }) => {
             ) : (
               api.map(news => {
                 return (
-                  <div>
-                    <Col xl={3} style={{display:"flex"}}>
-                      <Card>
-                        <a href={news.url} target="__blank">
-                          <CardImg
-                            top
-                            width="100%"
-                            src={
-                              news.urlToImage ? `${news.urlToImage}` : `${Man}`
-                            }
-                            alt="Card image cap"
-                          />
-                          <CardBody>
-                            <CardTitle tag="h5" className="newsTitle">
-                              {`${news.title}`.substring(0, 100)}..
-                            </CardTitle>
-                            <CardSubtitle
-                              tag="h6"
-                              className="mb-2 text-muted"
-                            ></CardSubtitle>
-                            {/* <CardText className="newsTitle">
-                            {news.description
-                              ? `${news.description}`.substring(0, 100)
-                              : `${news.content}`.substring(0, 100)}
-                            ...
-                          </CardText> */}
-                            {/* <Button>
-                            <a href={news.url} target="__blank">
-                              Read more
-                            </a>
-                          </Button> */}
-                            <br />
-                            <span className="source">{news.source.name}</span>
-                          </CardBody>
-                        </a>
-                      </Card>
-                    </Col>
-                  </div>
+                  <Container key={news.content}>
+                    <Row >
+                      <Col xl={4}>Hello</Col>
+                    </Row>
+                  </Container>
                 )
               })
             )}
           </div>
         </div>
       </div>
+      <div></div>
     </Container>
   )
 }

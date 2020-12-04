@@ -15,6 +15,7 @@ import Steps from "../components/sections/steps"
 import "../components/sections/sections.css"
 import Areas from "../components/sections/areas"
 import axios from "axios"
+import News from "../components/sections/news"
 
 const IndexPage = () => {
   const [api, setApi] = useState("")
@@ -66,6 +67,7 @@ const IndexPage = () => {
         <Steps />
       </div>
       <GetStarted api={api} />
+      
       <Footer />
     </Layout>
   )
