@@ -7,20 +7,66 @@ import darkDashboardIcon from "../../images/dark-dashboard.svg"
 import smileImg from "../../images/smileImg.svg"
 
 import { Section, Container } from "../global"
+import{Row, Col} from "reactstrap"
 
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Moneyvest</Subtitle>
+      <Subtitle></Subtitle>
       <SectionTitle>Why us?</SectionTitle>
+      <Row>
+          <Col xl={2}>
+            <img
+              src={Construction}
+              alt="Construction"
+              width={"60px"}
+              style={{ display: "block", margin: "auto" }}
+              height={"60px"}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                textAlign: "center",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              Construction
+            </h3>
+          </Col>
+          </Row>
       <FeaturesGrid>
         <FeatureItem>
           <img src={darkExtra} alt="darkExtra" width={"60px"} height={"60px"} />
-          <FeatureTitle>Easy to use</FeatureTitle>
+          <FeatureTitle>
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+              }}
+            >
+              Easy to Use
+            </h3>
+          </FeatureTitle>
         </FeatureItem>
         <FeatureItem>
           <img src={totalSale} alt="pieChart" width={"60px"} height={"60px"} />
-          <FeatureTitle>Quick returns</FeatureTitle>
+          <FeatureTitle>
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+              }}
+            >
+              Quick Returns
+            </h3>
+          </FeatureTitle>
         </FeatureItem>
         <FeatureItem>
           <img
@@ -29,17 +75,39 @@ const Features = () => (
             width={"60px"}
             height={"60px"}
           />
-          <FeatureTitle>Single dashboard</FeatureTitle>
+          <FeatureTitle>
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+              }}
+            >
+              Single Dashboard
+            </h3>
+          </FeatureTitle>
         </FeatureItem>
         <FeatureItem>
           <img src={smileImg} alt="smileImg" width={"60px"} height={"60px"} />
-          <FeatureTitle>Customer service</FeatureTitle>
+          <FeatureTitle>
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+              }}
+            >
+              Customer Service
+            </h3>
+          </FeatureTitle>
         </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>
     <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
     <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
-    <StyledContainer>
+    {/* <StyledContainer>
       <Subtitle>Features</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
       <FeaturesGrid>
@@ -79,7 +147,7 @@ const Features = () => (
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
-    </StyledContainer>
+    </StyledContainer> */}
   </Section>
 )
 

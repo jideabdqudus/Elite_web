@@ -15,6 +15,7 @@ import Steps from "../components/sections/steps"
 import "../components/sections/sections.css"
 import Areas from "../components/sections/areas"
 
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -22,12 +23,12 @@ const IndexPage = () => (
     <Header />
     <Youtube />
     <div className="stepBackground">
-      <Areas/>
+      <Areas />
     </div>
+    <Features />
     <div className="stepBackground">
       <Steps />
     </div>
-    <Features />
     <GetStarted />
     <Footer />
   </Layout>

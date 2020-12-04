@@ -5,7 +5,7 @@ import "./sections.css"
 
 const youtube = () => {
   return (
-    <Container>
+    <Container style={{marginTop:"0px"}}>
       <Row>
         <Col sm="12" md={{ size: 6, offset: 3 }}>
           <ReactPlayer

@@ -53,104 +53,135 @@ const Areas = () => (
               investing.{" "}
             </p>
           </div>
-          <FeaturesGrid>
-            <FeatureItem>
-              <img
-                src={Construction}
-                alt="Construction"
-                width={"60px"}
-                height={"60px"}
-              />
-              <h3
-                style={{
-                  color: "#212529",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  marginBottom: ".5rem",
-                }}
-              >
-                Construction
-              </h3>
-            </FeatureItem>
-            <FeatureItem>
-              <img
-                src={eCommerce}
-                alt="eCommerce"
-                width={"60px"}
-                height={"60px"}
-              />
-              <h3
-                style={{
-                  color: "#212529",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  marginBottom: ".5rem",
-                }}
-              >
-                eCommerce/Clouds
-              </h3>
-            </FeatureItem>
-            <FeatureItem>
-              <img
-                src={autoMobile}
-                alt="autoMobile"
-                width={"60px"}
-                height={"60px"}
-              />
-              <h3
-                style={{
-                  color: "#212529",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  marginBottom: ".5rem",
-                }}
-              >
-                Automobile
-              </h3>
-            </FeatureItem>
-            <FeatureItem>
-              <img src={Airline} alt="Airline" width={"60px"} height={"60px"} />
-              <h3
-                style={{
-                  color: "#212529",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  marginBottom: ".5rem",
-                }}
-              >
-                Airline
-              </h3>
-            </FeatureItem>
-            <FeatureItem>
-              <img src={Payment} alt="Payment" width={"60px"} height={"60px"} />
-              <h3
-                style={{
-                  color: "#212529",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  marginBottom: ".5rem",
-                }}
-              >
-                Payment system/finance
-              </h3>
-            </FeatureItem>
-            <FeatureItem>
-              <img src={SP500} alt="SP500" width={"60px"} height={"60px"} />
-              <h3
-                style={{
-                  color: "#212529",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  marginBottom: ".5rem",
-                }}
-              >
-                S&P 500
-              </h3>
-            </FeatureItem>
-          </FeaturesGrid>
         </Col>
+        <Row>
+          <Col xl={2}>
+            <img
+              src={Construction}
+              alt="Construction"
+              width={"60px"}
+              style={{ display: "block", margin: "auto" }}
+              height={"60px"}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                textAlign: "center",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              Construction
+            </h3>
+          </Col>
+          <Col xl={2}>
+            <img
+              src={eCommerce}
+              alt="eCommerce"
+              width={"60px"}
+              height={"60px"}
+              style={{ display: "block", margin: "auto" }}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              eCommerce/Clouds
+            </h3>
+          </Col>
+          <Col xl={2}>
+            <img
+              src={autoMobile}
+              alt="autoMobile"
+              width={"60px"}
+              height={"60px"}
+              style={{ display: "block", margin: "auto" }}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              Automobile
+            </h3>
+          </Col>
+          <Col xl={2}>
+            <img
+              src={Airline}
+              alt="Airline"
+              width={"60px"}
+              style={{ display: "block", margin: "auto" }}
+              height={"60px"}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              Airline
+            </h3>
+          </Col>
+          <Col xl={3}>
+            <img
+              src={Payment}
+              alt="Payment"
+              width={"60px"}
+              style={{ display: "block", margin: "auto" }}
+              height={"60px"}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              Payment system/finance
+            </h3>
+          </Col>
+          <Col xl={1}>
+            <img
+              src={SP500}
+              alt="SP500"
+              width={"60px"}
+              height={"60px"}
+              style={{ display: "block", margin: "auto" }}
+            />
+            <h3
+              style={{
+                color: "#212529",
+                fontSize: "18px",
+                fontWeight: "700",
+                marginBottom: ".5rem",
+                textAlign: "center",
+              }}
+            >
+              S&P 500
+            </h3>
+          </Col>
+        </Row>
       </StyledContainer>
     </Row>
+    {/* <Col sm="12" md={{ size: 6, offset: 3 }}>
+      <button className="btnInvest">Invest Now</button>
+    </Col> */}
     <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
     <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
   </Section>

@@ -200,7 +200,7 @@ const Steps = () => {
                 </p>
               </Col>
             </Row>
-            <button className="btnInvest">Invest Now</button>
+            <button className="btnInvest">Start Investing</button>
           </div>
         </Col>
         <Col xl={4}>

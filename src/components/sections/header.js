@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "./sections.css"
-import {Row, Col} from "reactstrap"
+import { Row, Col } from "reactstrap"
 import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
 import Laptop from "../../images/product/laptop-v2.png"
 
@@ -12,7 +12,7 @@ import { Container } from "../global"
 const Header = props => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "laptop-v2" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -31,7 +31,7 @@ const Header = props => {
   }
 
   return (
-    <HeaderWrapper id="top">
+    <HeaderWrapper id="top" style={{ backgroundColor: "" }}>
       <Container>
         <Flex>
           <HeaderTextGroup>
@@ -49,17 +49,20 @@ const Header = props => {
               <HeaderButton onClick={toggle}>Early access</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
-              No spamming{" "}
-              <span style={{ color: "#098C8C" }}>It's a promise</span>
+              Be the {" "}
+              <span style={{ color: "#098C8C" }}>first to know</span> of new Investments
             </FormSubtitle>
           </HeaderTextGroup>
-          {/* <ImageWrapper >
-            <StyledImage className="imageWrap" fluid={data.file.childImageSharp.fluid}  />
+          <ImageWrapper>
+            <StyledImage
+              className="imageWrap"
+              fluid={data.file.childImageSharp.fluid}
+            />
             <br />
-          </ImageWrapper> */}
-          <div>
+          </ImageWrapper>
+          {/* <div>
             <img src={Laptop} className="imageWrap container" />
-          </div>
+          </div> */}
         </Flex>
       </Container>
     </HeaderWrapper>
