@@ -207,7 +207,7 @@ const Steps = () => {
           <img
             src={Man}
             width="600px"
-            style={{ borderRadius: "10px", marginTop: "70px" }}
+            className="youngMan"
           />
         </Col>
       </Row>

@@ -18,7 +18,7 @@ import { Link } from "gatsby"
 import Elite from "../../../images/Elite(black).png"
 import "./navigation.css"
 
-const NAV_ITEMS = ["Home", "Blog", "FAQ", ""]
+const NAV_ITEMS = ["", "", "", ""]
 
 export default class Navigation extends Component {
   state = {

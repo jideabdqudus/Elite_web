@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+import EliteLogo from "../../images/Elite_Logo.svg"
 
 import { Container } from "../global"
 
 const Footer = () => (
   <FooterWrapper id="footer">
-    <FooterColumnContainer>
+    {/* <FooterColumnContainer>
       <FooterColumn>
         <span>About</span>
         <ul>
@@ -34,22 +35,28 @@ const Footer = () => (
           <li>Terms of Use</li>
         </ul>
       </FooterColumn>
-    </FooterColumnContainer>
+    </FooterColumnContainer> */}
     <BrandContainer>
       <Logo>
-        Moneyvest {"  "}
-        <span style={{ fontSize: "10px" }}>
-          <a
-            href="https://abdulqudus.com"
-            target="__blank"
-            style={{ color: " #098c8c" }}
-          >
-            {"  "}
-            by, jideabdqudus.{" "}
-          </a>
-        </span>
+        <img src={EliteLogo} width="150px" />
       </Logo>
     </BrandContainer>
+    <Container style={{ textAlign: "center" }}>
+      <p
+        style={{
+          display: "block",
+          fontSize: "14px",
+          fontWeight: "600",
+          lineHeight: "0",
+          margin: "10px",
+        }}
+      >
+        Lagos, Nigeria
+      </p>
+      <p style={{ display: "block", fontSize: "14px", fontWeight: "600" }}>
+        ©2020 All rights reserved
+      </p>
+    </Container>
   </FooterWrapper>
 )
 

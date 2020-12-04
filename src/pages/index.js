@@ -24,7 +24,7 @@ const IndexPage = () => {
     const fetchData = () => {
       axios
         .get(
-          "http://newsapi.org/v2/top-headlines?country=ng&category=business&pageSize=4&apiKey=20522df2815a4ce39815abc038d54ea7"
+          "http://newsapi.org/v2/top-headlines?country=ng&category=business&pageSize=1&apiKey=20522df2815a4ce39815abc038d54ea7"
         )
         .then(response => setApi(response.data.articles))
         .catch(function(error) {
@@ -67,8 +67,8 @@ const IndexPage = () => {
         <Steps />
       </div>
       <GetStarted api={api} />
-      
-      <Footer />
+
+      <Footer className="stepBackground" />
     </Layout>
   )
 }
