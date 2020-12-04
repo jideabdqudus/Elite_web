@@ -22,6 +22,10 @@
   .youngMan{
     visibility: hidden;
   }
+  .imageCol{
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .youngMan{

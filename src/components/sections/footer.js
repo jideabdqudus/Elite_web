@@ -38,7 +38,7 @@ const Footer = () => (
     </FooterColumnContainer> */}
     <BrandContainer>
       <Logo>
-        <img src={EliteLogo} width="150px" />
+        {/* <img src={EliteLogo} width="150px" /> */}
       </Logo>
     </BrandContainer>
     <Container style={{ textAlign: "center" }}>
@@ -51,7 +51,7 @@ const Footer = () => (
           margin: "10px",
         }}
       >
-        Lagos, Nigeria
+        Elite Investment, Nigeria
       </p>
       <p style={{ display: "block", fontSize: "14px", fontWeight: "600" }}>
         ©2020 All rights reserved

@@ -203,7 +203,7 @@ const Steps = () => {
             <button className="btnInvest">Start Investing</button>
           </div>
         </Col>
-        <Col xl={4}>
+        <Col xl={4} className="imageCol">
           <img
             src={Man}
             width="600px"
