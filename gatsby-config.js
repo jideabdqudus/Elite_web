@@ -13,17 +13,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Source Sans Pro`,
-            variants: [`300`, `400`, `600`, `700`],
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GA_TRACKING_ID || "none",
