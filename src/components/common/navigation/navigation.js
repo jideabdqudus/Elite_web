@@ -105,13 +105,21 @@ export default class Navigation extends Component {
           <ActionsContainer>
             <button className="btnLogin">
               {" "}
-              <Link to="/sign" className="login">
+              <a
+                href="https://elite-inv-dashboard.netlify.app"
+                target="__blank"
+                className="login"
+              >
                 Log in
-              </Link>
+              </a>
             </button>
             <button className="btnSign">
               {" "}
-              <Link to="/sign" className="sign">
+              <Link
+                href="https://elite-inv-dashboard.netlify.app"
+                target="__blank"
+                className="sign"
+              >
                 Sign up
               </Link>
             </button>
